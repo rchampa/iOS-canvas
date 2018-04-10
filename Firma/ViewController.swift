@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PDFGenerator
 
 class ViewController: UIViewController {
     
@@ -120,6 +121,24 @@ private extension ViewController{
     
     @IBAction func clearCanvas(_ sender: Any) {
         canvas.image = nil
+    }
+    
+    @IBAction func generatePDF(_ sender: Any) {
+        let dst = URL(fileURLWithPath: NSTemporaryDirectory().appending("sign.pdf"))
+        // outputs as Data
+        //        do {
+        //            let data = try PDFGenerator.generated(by: [canvas])
+        //            data.write(to: dst, options: .atomic)
+        //        } catch (let error) {
+        //            print(error)
+        //        }
+        
+        // writes to Disk directly.
+        do {
+            try PDFGenerator.generate([canvas], to: dst)
+        } catch (let error) {
+            print(error)
+        }
     }
     
 }

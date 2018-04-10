@@ -73,6 +73,11 @@
                                     <action selector="exportSign:" destination="BYZ-38-t0r" id="4qU-5C-3ao"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem title="PDF" id="30V-g7-Jn4">
+                                <connections>
+                                    <action selector="generatePDF:" destination="BYZ-38-t0r" id="yvA-33-Tlf"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem systemItem="cancel" id="dgw-Hn-fb2">
                                 <connections>
                                     <action selector="clearCanvas:" destination="BYZ-38-t0r" id="bff-01-2zp"/>

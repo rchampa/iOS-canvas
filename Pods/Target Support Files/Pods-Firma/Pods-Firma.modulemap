@@ -1,0 +1,6 @@
+module Pods_Firma [system] {
+  umbrella header "Pods-Firma-umbrella.h"
+
+  export *
+  module * { export * }
+}
