@@ -12,6 +12,7 @@
 		2CCC5077207CB1670006C7CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCC5075207CB1670006C7CB /* Main.storyboard */; };
 		2CCC5079207CB1670006C7CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CCC5078207CB1670006C7CB /* Assets.xcassets */; };
 		2CCC507C207CB1670006C7CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCC507A207CB1670006C7CB /* LaunchScreen.storyboard */; };
+		2CCC5085207CFD880006C7CB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCC5084207CFD880006C7CB /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2CCC5078207CB1670006C7CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CCC507B207CB1670006C7CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CCC507D207CB1670006C7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CCC5084207CFD880006C7CB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CCC5085207CFD880006C7CB /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				2CCC5070207CB1670006C7CB /* Firma */,
 				2CCC506F207CB1670006C7CB /* Products */,
+				2CCC5083207CFD870006C7CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				2CCC507D207CB1670006C7CB /* Info.plist */,
 			);
 			path = Firma;
+			sourceTree = "<group>";
+		};
+		2CCC5083207CFD870006C7CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CCC5084207CFD880006C7CB /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +292,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = es.c.rchampa.Firma;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -294,7 +306,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = es.c.rchampa.Firma;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
