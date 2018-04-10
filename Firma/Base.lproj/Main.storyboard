@@ -38,12 +38,30 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UEb-mQ-jbg">
                                 <rect key="frame" x="0.0" y="32" width="667" height="343"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1FR-rO-6lB">
+                                <rect key="frame" x="100" y="323" width="467" height="2"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="dEO-vY-hcI"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R58-i9-Kl6">
+                                <rect key="frame" x="297.5" y="335" width="72.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="R58-i9-Kl6" firstAttribute="centerX" secondItem="1FR-rO-6lB" secondAttribute="centerX" id="4F2-QX-MVY"/>
+                            <constraint firstItem="R58-i9-Kl6" firstAttribute="top" secondItem="1FR-rO-6lB" secondAttribute="bottom" constant="10" id="FYB-QZ-vgg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1FR-rO-6lB" secondAttribute="trailing" constant="100" id="NZM-37-QBl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UEb-mQ-jbg" secondAttribute="trailing" id="TMq-6I-WuR"/>
                             <constraint firstItem="UEb-mQ-jbg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZRH-XD-s9e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1FR-rO-6lB" secondAttribute="bottom" constant="50" id="sBk-cg-xVH"/>
                             <constraint firstItem="UEb-mQ-jbg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tq4-dj-RRd"/>
+                            <constraint firstItem="1FR-rO-6lB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="xmC-i7-bSj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UEb-mQ-jbg" secondAttribute="bottom" id="zmI-CU-044"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -68,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-620" y="233"/>
+            <point key="canvasLocation" x="-620.23988005997012" y="232.80000000000001"/>
         </scene>
     </scenes>
 </document>
