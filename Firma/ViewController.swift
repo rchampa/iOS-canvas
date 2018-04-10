@@ -13,6 +13,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var canvas: UIImageView!
     
+    fileprivate lazy var docInteractionController: UIDocumentInteractionController = {
+        return UIDocumentInteractionController()
+    }()
+    
+    
+    let filename = "sign.pdf"
+    
     //stores the last drawn point on the canvas. This is used when a continuous brush stroke is being drawn on the canvas.
     var lastPoint = CGPoint.zero
     
@@ -98,6 +105,7 @@ class ViewController: UIViewController {
         UIGraphicsEndImageContext()
         
     }
+    
 }
 private extension ViewController{
     @IBAction func exportSign(_ sender: Any) {
@@ -124,7 +132,7 @@ private extension ViewController{
     }
     
     @IBAction func generatePDF(_ sender: Any) {
-        let dst = URL(fileURLWithPath: NSTemporaryDirectory().appending("sign.pdf"))
+        let dst = URL(fileURLWithPath: NSTemporaryDirectory().appending(filename))
         // outputs as Data
         //        do {
         //            let data = try PDFGenerator.generated(by: [canvas])
@@ -141,6 +149,29 @@ private extension ViewController{
         }
     }
     
+    
+    @IBAction func pdfPreview(_ sender: Any) {
+        
+        let tmpDir = NSTemporaryDirectory()
+        
+        let url = URL(fileURLWithPath: tmpDir).appendingPathComponent(filename)
+        docInteractionController.url = url
+        docInteractionController.delegate = self
+        
+        if docInteractionController.presentPreview(animated: true) {
+            // Successfully displayed
+        } else {
+            // Couldn't display
+        }
+    }
+    
+}
+
+extension ViewController: UIDocumentInteractionControllerDelegate {
+    func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
+        // I tend to use 'navigationController ?? self' here but depends on implementation
+        return self
+    }
 }
 
 
